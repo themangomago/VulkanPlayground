@@ -5,6 +5,11 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("vulkan_guide")
 
+#set(Vulkan_LIBRARY "C:/dev/c/lib/VulkanSDK/1.3.268.0/Lib/vulkan-1.lib")
+#set(Vulkan_INCLUDE_DIR "C:/dev/c/lib/VulkanSDK/1.3.268.0/Include")
+#set(sdl2_DIR "C:/dev/c/lib/SDL2-2.28.5")
+
+
 set(CMAKE_CXX_STANDARD 17)
 
 find_package(Vulkan REQUIRED)
