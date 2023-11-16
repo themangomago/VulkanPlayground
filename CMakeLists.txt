@@ -5,6 +5,9 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("vulkan_guide")
 
+set(USE_VULKAN_PATH, "C:/dev/c/lib/VulkanSDK/1.3.268.0")
+
+
 #set(Vulkan_LIBRARY "C:/dev/c/lib/VulkanSDK/1.3.268.0/Lib/vulkan-1.lib")
 #set(Vulkan_INCLUDE_DIR "C:/dev/c/lib/VulkanSDK/1.3.268.0/Include")
 #set(sdl2_DIR "C:/dev/c/lib/SDL2-2.28.5")
@@ -21,7 +24,7 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 add_subdirectory(src)
 
 
-find_program(GLSL_VALIDATOR glslangValidator HINTS /usr/bin /usr/local/bin $ENV{VULKAN_SDK}/Bin/ $ENV{VULKAN_SDK}/Bin32/)
+#find_program(GLSL_VALIDATOR glslangValidator HINTS /usr/bin /usr/local/bin $ENV{VULKAN_SDK}/Bin/ $ENV{VULKAN_SDK}/Bin32/ ${USE_VULKAN_PATH}/Bin/)
 
 ## find all the shader files under the shaders folder
 file(GLOB_RECURSE GLSL_SOURCE_FILES
